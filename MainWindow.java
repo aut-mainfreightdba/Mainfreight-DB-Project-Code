@@ -203,7 +203,9 @@ public class MainWindow
 				
 				//set up error message box and error message variable
 				String errorMsg = null;
-				MessageBox messageBox = new MessageBox(shell, SWT.OK | SWT.ICON_ERROR);
+				MessageBox errorBox = new MessageBox(shell, SWT.OK | SWT.ICON_ERROR);
+				String displayMessage = null;
+				MessageBox contentBox = new MessageBox(shell, SWT.OK | SWT.ICON_INFORMATION);
 				
 				//Check if converted string is empty or null
 				if(firstNameString == null || firstNameString.isEmpty())
@@ -374,23 +376,23 @@ public class MainWindow
 				//if error message has been loaded with an error message
 				if (errorMsg != null) 
 				{
-					messageBox.setMessage(errorMsg);
-					messageBox.open();
+					errorBox.setMessage(errorMsg);
+					errorBox.open();
 				}
 				else
 				{
-					String displayMessage 	= "First Name: " + firstNameString 
-											+ "\nLast Name: " + lastNameString 
-											+ "\nGender: " + gender 
-											+ "\nAge: " + ageString
-											+ "\nPhone No: " + phoneNumberString
-											+ "\nEmail Address: " + emailString
-											+ "\nUniversity: " + universityString
-											+ "\nDegree: " + degreeString
-											+ "\nBranch: " + branchString
-											+ "\nDivision: " + divisionString
-											+ "\nInduction Course: " + inductionCourseString
-											+ "\nMentor: " + mentorString;
+					displayMessage 	= "First Name: " + firstNameString 
+									+ "\nLast Name: " + lastNameString 
+									+ "\nGender: " + gender 
+									+ "\nAge: " + ageString
+									+ "\nPhone No: " + phoneNumberString
+									+ "\nEmail Address: " + emailString
+									+ "\nUniversity: " + universityString
+									+ "\nDegree: " + degreeString
+									+ "\nBranch: " + branchString
+									+ "\nDivision: " + divisionString
+									+ "\nInduction Course: " + inductionCourseString
+									+ "\nMentor: " + mentorString;
 					/*
 					System.out.println(firstNameString); //print out string to test content
 					System.out.println(lastNameString);
@@ -405,8 +407,8 @@ public class MainWindow
 					System.out.println(inductionCourseString);
 					System.out.println(mentorString);
 					*/
-					messageBox.setMessage(displayMessage);
-					messageBox.open();
+					contentBox.setMessage(displayMessage);
+					contentBox.open();
 				}
 			}
 		});
