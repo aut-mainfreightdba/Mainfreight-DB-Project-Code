@@ -37,11 +37,11 @@ public class MainWindow
 	private String divisionString = null;
 	private String inductionCourseString = null;
 	private String mentorString = null;
-	
+	/*
 	/**
 	 * Launch the application.
 	 * @param args
-	 */
+	 /*
 	public static void main(String[] args) 
 	{
 		try 
@@ -54,7 +54,7 @@ public class MainWindow
 			e.printStackTrace();
 		}
 	}
-
+	*/
 	/**
 	 * Open the window.
 	 */
@@ -106,7 +106,7 @@ public class MainWindow
 		
 		//Radio Button Male (True/False Only)
 		Button btnMale = new Button(shell, SWT.RADIO);
-		btnMale.setBounds(314, 9, 55, 16);
+		btnMale.setBounds(314, 9, 45, 16);
 		btnMale.setText("Male");
 		
 		//Radio Button Female (True/False Only)
